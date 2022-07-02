@@ -1,13 +1,13 @@
 import Layout from './components/Layout';
 import Profile from './components/Profile';
+import Repos from './components/Repos';
 
 const App = () => {
   return (
     <main>
       <Layout>
         <Profile />
-        <div>repos</div>
-        <div>stars</div>
+        <Repos />
       </Layout>
     </main>
   );
