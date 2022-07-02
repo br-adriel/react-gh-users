@@ -21,13 +21,37 @@ export const WrapperInfoUser = styled.div`
   justify-content: space-between;
   height: auto;
   margin-left: 8px;
+  height: 200px;
+
+  h1,
+  h3,
+  h4 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
 `;
 
 export const WrapperUsername = styled.div`
   display: flex;
   align-items: center;
+  margin-top: 8px;
+
   h3 {
     margin-right: 8px;
+  }
+
+  a {
+    color: blue;
+    font-weight: bold;
+    font-size: 18px;
   }
 `;
 
