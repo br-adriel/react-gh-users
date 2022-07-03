@@ -75,10 +75,20 @@ const GithubProvider = ({ children }) => {
     });
   };
 
+  const getUserStarred = (username) => {
+    api.get(`users/${username}/starred`).then(({ data }) => {
+      setGithubState((prevState) => ({
+        ...prevState,
+        starred: data,
+      }));
+    });
+  };
+
   const contextValue = {
     githubState,
     getUser: useCallback((username) => getUser(username), []),
     getUserRepos: useCallback((username) => getUserRepos(username), []),
+    getUserStarred: useCallback((username) => getUserStarred(username), []),
   };
 
   return (

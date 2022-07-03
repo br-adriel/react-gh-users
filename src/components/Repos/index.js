@@ -4,12 +4,13 @@ import RepoItem from '../RepoItem';
 import * as S from './styled';
 
 const Repos = () => {
-  const { githubState, getUserRepos } = useGithub();
+  const { githubState, getUserRepos, getUserStarred } = useGithub();
   const [hasUserToSearchForRepos, setHasUserToSearchForRepos] = useState(false);
 
   useEffect(() => {
     if (!!githubState.user.login) {
       getUserRepos(githubState.user.login);
+      getUserStarred(githubState.user.login);
     }
     setHasUserToSearchForRepos(githubState.repositories);
   }, [githubState.user.login]);
@@ -32,19 +33,19 @@ const Repos = () => {
                   key={repo.id}
                   name={repo.name}
                   linkToRepo={repo.html_url}
-                  fullName='br-adriel/repo-1'
+                  fullName={repo.full_name}
                 />
               );
             })}
           </S.WrapperTabPanel>
           <S.WrapperTabPanel>
-            {githubState.repositories.map((repo) => {
+            {githubState.starred.map((repo) => {
               return (
                 <RepoItem
                   key={repo.id}
                   name={repo.name}
                   linkToRepo={repo.html_url}
-                  fullName='br-adriel/repo-1'
+                  fullName={repo.full_name}
                 />
               );
             })}
