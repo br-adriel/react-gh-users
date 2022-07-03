@@ -9,6 +9,7 @@ export const GithubContext = createContext({
 
 const GithubProvider = ({ children }) => {
   const [githubState, setGithubState] = useState({
+    hasUser: false,
     loading: false,
     user: {
       login: undefined,
@@ -36,6 +37,7 @@ const GithubProvider = ({ children }) => {
       .then(({ data }) => {
         setGithubState((prevState) => ({
           ...prevState,
+          hasUser: true,
           user: {
             login: data.login,
             name: data.name,
@@ -48,6 +50,12 @@ const GithubProvider = ({ children }) => {
             public_gists: data.public_gists,
             public_repos: data.public_repos,
           },
+        }));
+      })
+      .catch(() => {
+        setGithubState((prevState) => ({
+          ...prevState,
+          hasUser: false,
         }));
       })
       .finally(() => {

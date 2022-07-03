@@ -7,7 +7,15 @@ const Layout = ({ children }) => {
   return (
     <S.WrapperLayout>
       <Header />
-      {githubState.loading ? <p>Loading...</p> : children}
+      {githubState.hasUser ? (
+        githubState.loading ? (
+          <p>Loading...</p>
+        ) : (
+          children
+        )
+      ) : (
+        <p>Not found</p>
+      )}
     </S.WrapperLayout>
   );
 };
