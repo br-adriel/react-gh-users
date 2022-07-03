@@ -1,14 +1,17 @@
 import Layout from './components/Layout';
 import Profile from './components/Profile';
 import Repos from './components/Repos';
+import GithubProvider from './providers/GithubProvider';
 
 const App = () => {
   return (
     <main>
-      <Layout>
-        <Profile />
-        <Repos />
-      </Layout>
+      <GithubProvider>
+        <Layout>
+          <Profile />
+          <Repos />
+        </Layout>
+      </GithubProvider>
     </main>
   );
 };
