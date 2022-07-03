@@ -14,6 +14,7 @@ const GithubProvider = ({ children }) => {
       html_url: undefined,
       blog: undefined,
       location: undefined,
+      avatar_url: undefined,
       followers: 0,
       following: 0,
       public_gists: 0,

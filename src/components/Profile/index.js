@@ -5,10 +5,7 @@ const Profile = () => {
   const { githubState } = useGithub();
   return (
     <S.Wrapper>
-      <S.WrapperImage
-        src='https://avatars.githubusercontent.com/u/49590887?v=4'
-        alt='User profile'
-      />
+      <S.WrapperImage src={githubState.user.avatar_url} alt='User profile' />
       <S.WrapperInfoUser>
         <div>
           <h1>{githubState.user.name}</h1>
