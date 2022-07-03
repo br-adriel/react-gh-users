@@ -1,6 +1,7 @@
 import Header from '../Header';
 import * as S from './styled';
 import useGithub from '../../hooks/github-hooks';
+import UserNotFound from '../UserNotFound';
 
 const Layout = ({ children }) => {
   const { githubState } = useGithub();
@@ -14,7 +15,7 @@ const Layout = ({ children }) => {
           children
         )
       ) : (
-        <p>Not found</p>
+        <UserNotFound />
       )}
     </S.WrapperLayout>
   );
