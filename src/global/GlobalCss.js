@@ -3,6 +3,7 @@ import 'normalize.css';
 
 export const GlobalCss = createGlobalStyle`
   body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Barlow', sans-serif;
+    min-height: 100vh;
   }
 `;
