@@ -27,23 +27,35 @@ const GithubProvider = ({ children }) => {
   });
 
   const getUser = (username) => {
-    api.get(`users/${username}`).then(({ data }) => {
-      setGithubState((prevState) => ({
-        ...prevState,
-        user: {
-          login: data.login,
-          name: data.name,
-          html_url: data.html_url,
-          blog: data.blog,
-          location: data.location,
-          avatar_url: data.avatar_url,
-          followers: data.followers,
-          following: data.following,
-          public_gists: data.public_gists,
-          public_repos: data.public_repos,
-        },
-      }));
-    });
+    setGithubState((prevState) => ({
+      ...prevState,
+      loading: true,
+    }));
+    api
+      .get(`users/${username}`)
+      .then(({ data }) => {
+        setGithubState((prevState) => ({
+          ...prevState,
+          user: {
+            login: data.login,
+            name: data.name,
+            html_url: data.html_url,
+            blog: data.blog,
+            location: data.location,
+            avatar_url: data.avatar_url,
+            followers: data.followers,
+            following: data.following,
+            public_gists: data.public_gists,
+            public_repos: data.public_repos,
+          },
+        }));
+      })
+      .finally(() => {
+        setGithubState((prevState) => ({
+          ...prevState,
+          loading: false,
+        }));
+      });
   };
 
   const contextValue = {
