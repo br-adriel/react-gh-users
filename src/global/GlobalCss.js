@@ -18,6 +18,7 @@ export const GlobalCss = createGlobalStyle`
       flex-direction: column;
       align-items: center;
       padding: 10px;
+      gap: 10px;
     }
 
     a {
