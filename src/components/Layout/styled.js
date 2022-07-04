@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const WrapperLayout = styled.section`
-  margin: 16px;
+export const Main = styled.main`
+  flex-grow: 1;
 `;

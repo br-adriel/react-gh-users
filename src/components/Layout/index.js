@@ -2,22 +2,26 @@ import Header from '../Header';
 import * as S from './styled';
 import useGithub from '../../hooks/github-hooks';
 import UserNotFound from '../UserNotFound';
+import Footer from '../Footer';
 
 const Layout = ({ children }) => {
   const { githubState } = useGithub();
   return (
-    <S.WrapperLayout>
+    <>
       <Header />
-      {githubState.hasUser ? (
-        githubState.loading ? (
-          <p>Loading...</p>
+      <S.Main>
+        {githubState.hasUser ? (
+          githubState.loading ? (
+            <p>Loading...</p>
+          ) : (
+            children
+          )
         ) : (
-          children
-        )
-      ) : (
-        <UserNotFound />
-      )}
-    </S.WrapperLayout>
+          <UserNotFound />
+        )}
+      </S.Main>
+      <Footer />
+    </>
   );
 };
 
