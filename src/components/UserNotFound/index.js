@@ -1,9 +1,13 @@
+import { EmojiFrown } from 'react-bootstrap-icons';
 import * as S from './styled';
 
 const UserNotFound = () => {
   return (
     <S.Wrapper>
-      <p>User not found</p>
+      <S.Content>
+        <EmojiFrown />
+        <p>User not found</p>
+      </S.Content>
     </S.Wrapper>
   );
 };
