@@ -6,6 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import { GlobalCss } from './global/GlobalCss';
 import { lightTheme, darkTheme } from './components/Theme';
 import { useState } from 'react';
+import ThemeToggler from './components/ThemeToggler';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -16,6 +17,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
       <GlobalCss />
+      <ThemeToggler togglerFunc={changeTheme} current={theme} />
       <GithubProvider>
         <Layout>
           <Profile />
