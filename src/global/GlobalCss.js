@@ -19,5 +19,16 @@ export const GlobalCss = createGlobalStyle`
       align-items: center;
       padding: 10px;
     }
+
+    a {
+      color: ${({ theme }) => theme.accent};
+      opacity: 0.9;
+      transition: opacity .3s ease;
+      font-size: 1rem;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
   }
 `;
