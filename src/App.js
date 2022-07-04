@@ -9,7 +9,7 @@ import { useState } from 'react';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
-  const themeToggler = () => {
+  const changeTheme = () => {
     theme === 'light' ? setTheme('dark') : setTheme('light');
   };
 
@@ -21,7 +21,6 @@ const App = () => {
           <Profile />
           <Repos />
         </Layout>
-        <button onClick={themeToggler}>Tema</button>
       </GithubProvider>
     </ThemeProvider>
   );
