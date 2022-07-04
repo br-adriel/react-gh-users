@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { BrightnessHigh, Moon } from 'react-bootstrap-icons';
 import * as S from './styled';
 
