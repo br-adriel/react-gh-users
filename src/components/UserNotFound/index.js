@@ -1,15 +1,8 @@
 import { EmojiFrown } from 'react-bootstrap-icons';
-import * as S from './styled';
+import StatusCard from '../StatusCard';
 
 const UserNotFound = () => {
-  return (
-    <S.Wrapper>
-      <S.Content>
-        <EmojiFrown />
-        <p>User not found</p>
-      </S.Content>
-    </S.Wrapper>
-  );
+  return <StatusCard icon={<EmojiFrown />} message='User not found' />;
 };
 
 export default UserNotFound;
