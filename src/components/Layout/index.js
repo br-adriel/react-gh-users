@@ -3,6 +3,7 @@ import * as S from './styled';
 import useGithub from '../../hooks/github-hooks';
 import UserNotFound from '../UserNotFound';
 import Footer from '../Footer';
+import LoadingCard from '../LoadingCard';
 
 const Layout = ({ children }) => {
   const { githubState } = useGithub();
@@ -12,7 +13,7 @@ const Layout = ({ children }) => {
       <S.Main>
         {githubState.hasUser ? (
           githubState.loading ? (
-            <p>Loading...</p>
+            <LoadingCard />
           ) : (
             children
           )
