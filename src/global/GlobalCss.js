@@ -31,4 +31,9 @@ export const GlobalCss = createGlobalStyle`
       opacity: 1;
     }
   }
+
+  ::selection {
+    background-color:  ${({ theme }) => theme.accent};
+    color: ${({ theme }) => theme.accentContent};
+  }
 `;
