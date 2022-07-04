@@ -3,6 +3,7 @@ export const lightTheme = {
   bgAlt: '#fff',
   text: '#000',
   accent: '#34c436',
+  accentContent: '#fff',
 };
 
 export const darkTheme = {
@@ -10,4 +11,5 @@ export const darkTheme = {
   bgAlt: '#111',
   text: '#fff',
   accent: '#34c436',
+  accentContent: '#fff',
 };
