@@ -14,7 +14,8 @@ const Header = () => {
   };
 
   return (
-    <header>
+    <S.Header>
+      <h1>GH Users</h1>
       <S.SearchForm onSubmit={submitGetUser}>
         <label htmlFor='searchInput'>Search</label>
         <input
@@ -30,7 +31,7 @@ const Header = () => {
         />
         <button type='submit'>Search</button>
       </S.SearchForm>
-    </header>
+    </S.Header>
   );
 };
 
