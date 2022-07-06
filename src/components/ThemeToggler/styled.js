@@ -12,7 +12,7 @@ export const Button = styled.button`
   box-shadow: 0 0 3px ${({ theme }) => theme.accent};
   cursor: pointer;
   position: fixed;
-  right: 10px;
+  left: 10px;
   bottom: 15vh;
 
   svg {
