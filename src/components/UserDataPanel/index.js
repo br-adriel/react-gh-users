@@ -31,13 +31,11 @@ const UserDataPanel = () => {
     },
   ];
   return (
-    <div>
-      <S.UserDataWrapper>
-        {userData.map((item, i) => (
-          <UserDataItem title={item.title} content={item.content} key={i} />
-        ))}
-      </S.UserDataWrapper>
-    </div>
+    <S.UserDataWrapper>
+      {userData.map((item, i) => (
+        <UserDataItem title={item.title} content={item.content} key={i} />
+      ))}
+    </S.UserDataWrapper>
   );
 };
 
