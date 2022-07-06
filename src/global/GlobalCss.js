@@ -26,6 +26,7 @@ export const GlobalCss = createGlobalStyle`
       opacity: 0.9;
       transition: opacity .3s ease;
       font-size: 1rem;
+      text-decoration: none;
     }
 
     a:hover {
