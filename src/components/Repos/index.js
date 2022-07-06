@@ -34,6 +34,7 @@ const Repos = () => {
                   name={repo.name}
                   linkToRepo={repo.html_url}
                   fullName={repo.full_name}
+                  description={repo.description}
                 />
               );
             })}
