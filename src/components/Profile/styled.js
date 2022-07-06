@@ -11,4 +11,10 @@ export const Wrapper = styled.section`
       grid-template-columns: 2fr 5fr;
     }
   }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 `;
