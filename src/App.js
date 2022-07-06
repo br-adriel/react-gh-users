@@ -10,7 +10,17 @@ import GithubProvider from './providers/GithubProvider';
 const App = () => {
   const [theme, setTheme] = useState('light');
   const changeTheme = () => {
-    theme === 'light' ? setTheme('dark') : setTheme('light');
+    let themeColor = '';
+    if (theme === 'light') {
+      setTheme('dark');
+      themeColor = '#111111';
+    } else {
+      setTheme('light');
+      themeColor = '#fcfdff';
+    }
+    document
+      .querySelector('meta[name="theme-color"')
+      .setAttribute('content', themeColor);
   };
 
   return (
