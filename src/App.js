@@ -1,12 +1,11 @@
+import { useState } from 'react';
+import { ThemeProvider } from 'styled-components';
 import Layout from './components/Layout';
 import Profile from './components/Profile';
-import Repos from './components/Repos';
-import GithubProvider from './providers/GithubProvider';
-import { ThemeProvider } from 'styled-components';
-import { GlobalCss } from './global/GlobalCss';
-import { lightTheme, darkTheme } from './components/Theme';
-import { useState } from 'react';
+import { darkTheme, lightTheme } from './components/Theme';
 import ThemeToggler from './components/ThemeToggler';
+import { GlobalCss } from './global/GlobalCss';
+import GithubProvider from './providers/GithubProvider';
 
 const App = () => {
   const [theme, setTheme] = useState('light');
@@ -21,7 +20,6 @@ const App = () => {
       <GithubProvider>
         <Layout>
           <Profile />
-          <Repos />
         </Layout>
       </GithubProvider>
     </ThemeProvider>
