@@ -5,6 +5,7 @@ export const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  flex-grow: 1;
 
   @media screen and (min-width: 768px) {
     & {
