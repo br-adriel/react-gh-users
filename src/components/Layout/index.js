@@ -4,6 +4,7 @@ import useGithub from '../../hooks/github-hooks';
 import UserNotFound from '../UserNotFound';
 import Footer from '../Footer';
 import LoadingCard from '../LoadingCard';
+import WelcomeCard from '../WelcomeCard';
 
 const Layout = ({ children }) => {
   const { githubState } = useGithub();
@@ -11,7 +12,9 @@ const Layout = ({ children }) => {
     <>
       <Header />
       <S.Main>
-        {githubState.hasUser ? (
+        {githubState.notUsedYet ? (
+          <WelcomeCard />
+        ) : githubState.hasUser ? (
           githubState.loading ? (
             <LoadingCard />
           ) : (
