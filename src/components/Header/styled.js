@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Header = styled.header`
   background: ${({ theme }) => theme.bgAlt};
   width: 100%;
+  max-width: 1280px;
   box-shadow: 0 0 2px ${({ theme }) => theme.accent};
   display: flex;
   flex-direction: column;
