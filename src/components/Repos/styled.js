@@ -19,6 +19,7 @@ export const WrapperTabList = styled(TabList)`
   position: sticky;
   top: 10px;
   z-index: 10;
+  background: ${({ theme }) => theme.bg};
 `;
 
 WrapperTabList.tabsRole = 'TabList';
@@ -60,9 +61,24 @@ export const WrapperTabPanel = styled(TabPanel)`
   padding: 8px;
   border-radius: 5px;
   box-shadow: 0 0 2px ${({ theme }) => theme.accent};
+  grid-template-columns: 1fr;
+  grid-auto-rows: 170px;
+  gap: 8px;
 
   &.is-selected {
-    display: block;
+    display: grid;
+  }
+
+  @media screen and (min-width: 768px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 `;
 
