@@ -33,7 +33,6 @@ export const UserPhotoWrapper = styled.div`
   p {
     padding: 0;
     margin: 0;
-    text-align: center;
   }
 
   div {
@@ -52,6 +51,11 @@ export const UserPhotoWrapper = styled.div`
 
     img {
       width: 100%;
+    }
+
+    h2,
+    p {
+      text-align: center;
     }
   }
 `;
