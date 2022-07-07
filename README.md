@@ -1,4 +1,4 @@
-# Página de consulta de usuários Github :octocat:
+# Página de consulta de usuários Github
 
 Página de visualização de dados de usuários Github construída com React e Styled
 Components durante prática oferecida pela [DIO](https://www.dio.me)
