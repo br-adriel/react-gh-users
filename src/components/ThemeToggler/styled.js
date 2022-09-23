@@ -14,6 +14,7 @@ export const Button = styled.button`
   position: fixed;
   left: 10px;
   bottom: 15vh;
+  z-index: 1;
 
   svg {
     font-size: 1.2rem;
